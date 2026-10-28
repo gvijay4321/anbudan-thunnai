@@ -26,7 +26,7 @@ export default function FAQ() {
               <li key={a}>{a}</li>
             ))}
           </ul>
-          <p>Don’t see your area? Call us. We cover most of {contact.city}.</p>
+          <p>Don’t see your area? Call us and we will let you know.</p>
         </aside>
       </div>
     </section>

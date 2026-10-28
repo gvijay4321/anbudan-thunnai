@@ -7,13 +7,13 @@ export default function Plans() {
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">Subscription packages</p>
-          <h2>Care plans that fit your family</h2>
-          <p className="section-intro">Regular visits from the same trusted faces, with updates for you every time.</p>
+          <h2>Our care plans</h2>
+          <p className="section-intro">Monthly plans with regular visits and updates for the family.</p>
         </div>
         <div className="plans">
           {plans.map((p) => (
             <article key={p.name} className={`plan ${p.featured ? 'plan-featured' : ''}`}>
-              {p.featured && <span className="plan-badge">Most complete</span>}
+              {p.featured && <span className="plan-badge">Full care</span>}
               <h3>{p.name}</h3>
               <p className="plan-tagline">{p.tagline}</p>
               <p className="plan-price">

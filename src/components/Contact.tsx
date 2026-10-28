@@ -23,7 +23,7 @@ function EnquiryForm() {
   return (
     <form className="enquiry" onSubmit={submit}>
       <h3>Send us an enquiry</h3>
-      <p>Fill this in and we’ll continue on WhatsApp.</p>
+      <p>Fill in your details and send them to us on WhatsApp.</p>
       <div className="field-row">
         <label>
           Your name

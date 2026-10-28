@@ -8,7 +8,7 @@ export default function Services() {
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">What we do</p>
-          <h2>Help to get out, good company, and a closer eye on their wellbeing</h2>
+          <h2>How we help your parents</h2>
         </div>
         <div className="services">
           {services.map((s) => (

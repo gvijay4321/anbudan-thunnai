@@ -6,7 +6,7 @@ export default function HowItWorks() {
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">How it works</p>
-          <h2>Simple for you, comfortable for them</h2>
+          <h2>Getting started is easy</h2>
         </div>
         <ol className="steps">
           {steps.map((s, i) => (

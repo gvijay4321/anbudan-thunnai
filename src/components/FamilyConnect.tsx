@@ -20,11 +20,11 @@ export default function FamilyConnect() {
           </ul>
           <a
             className="btn btn-whatsapp"
-            href={whatsappUrl('Hello Anbudan Thunnai, I live away from my parents and would like to know about live checks and video calls.')}
+            href={whatsappUrl('Hello Anbudan Thunnai, I live away from my parents and would like to know about home visits and video calls.')}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <WhatsAppIcon /> Ask about live checks
+            <WhatsAppIcon /> Ask us on WhatsApp
           </a>
         </div>
         <div className="family-media">
