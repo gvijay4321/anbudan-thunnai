@@ -6,7 +6,9 @@ import { contact, telLink } from '../content'
 
 const links = [
   { href: '#services', label: 'Services' },
-  { href: '#how', label: 'How it works' },
+  { href: '#why-us', label: 'Why us' },
+  { href: '#plans', label: 'Plans' },
+  { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
 ]
 

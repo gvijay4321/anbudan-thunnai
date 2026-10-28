@@ -27,6 +27,24 @@ npm run preview    # serve the dist/ build locally
 | Page title / SEO description | `index.html` |
 | Custom domain | `public/CNAME` |
 
+## Images
+
+Save images into `public/images/` with exactly these names. Until a file exists, the site shows a soft placeholder in its place.
+
+| File | Shape | Where it appears |
+| --- | --- | --- |
+| `hero.jpg` | portrait 2:3 | Top of the page |
+| `service-pickup.jpg` | landscape 4:3 | Pickup & Drop card |
+| `service-outings.jpg` | landscape 4:3 | Outings & Visits card |
+| `service-companionship.jpg` | landscape 4:3 | Friendly Companionship card |
+| `service-live-checks.jpg` | landscape 4:3 | In-Person Live Checks card |
+| `service-video-calls.jpg` | landscape 4:3 | Video Calls card |
+| `service-fitness.jpg` | landscape 4:3 | Physio & Fitness card |
+| `why-us.jpg` | portrait 4:5 | "What makes us different" |
+| `family-video-call.jpg` | landscape 4:3 | "See your parents, even from far away" |
+
+Keep each file under about 300 KB: export as JPG around 1200px wide (or compress at squoosh.app).
+
 ## Deploying
 
 Every push to `main` builds the site and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). Progress shows in the repo's **Actions** tab, and the site updates about a minute after the push.

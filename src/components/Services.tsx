@@ -1,7 +1,6 @@
-import { services, type ServiceIcon } from '../content'
-import { CarIcon, PeopleIcon, PinIcon } from './Icons'
-
-const icons: Record<ServiceIcon, typeof CarIcon> = { car: CarIcon, pin: PinIcon, people: PeopleIcon }
+import { services } from '../content'
+import Icon from './Icon'
+import Photo from './Photo'
 
 export default function Services() {
   return (
@@ -9,16 +8,18 @@ export default function Services() {
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">What we do</p>
-          <h2>Help to get out, and good company along the way</h2>
+          <h2>Help to get out, good company, and a closer eye on their wellbeing</h2>
         </div>
         <div className="services">
-          {services.map((s) => {
-            const Icon = icons[s.icon]
-            return (
-              <article key={s.title} className={`service-card accent-${s.accent}`}>
+          {services.map((s) => (
+            <article key={s.title} className={`service-card accent-${s.accent}`}>
+              <div className="service-media">
+                <Photo src={s.image} alt={s.title} icon={s.icon} />
                 <div className="service-icon">
-                  <Icon width={30} height={30} />
+                  <Icon name={s.icon} width={28} height={28} />
                 </div>
+              </div>
+              <div className="service-body">
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>
                 <ul>
@@ -26,9 +27,9 @@ export default function Services() {
                     <li key={d}>{d}</li>
                   ))}
                 </ul>
-              </article>
-            )
-          })}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

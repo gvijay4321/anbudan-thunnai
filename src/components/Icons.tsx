@@ -73,6 +73,48 @@ export const HeartIcon = (p: P) => (
   </svg>
 )
 
+export const VideoIcon = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="2.5" y="6" width="13" height="12" rx="2.5" />
+    <path d="M15.5 10.5l6-3.5v10l-6-3.5" />
+  </svg>
+)
+
+export const HomeIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M3.5 11L12 4l8.5 7" />
+    <path d="M5.5 9.5V20h13V9.5" />
+    <path d="M12 17.5s-3-1.8-3-3.8a1.6 1.6 0 0 1 3-.9 1.6 1.6 0 0 1 3 .9c0 2-3 3.8-3 3.8z" />
+  </svg>
+)
+
+export const ActivityIcon = (p: P) => (
+  <svg {...base(p)}>
+    <circle cx="13.5" cy="4.5" r="2" />
+    <path d="M7 21l3-6 3 2v4M10 15l1.5-5.5L8 11 6 9M11.5 9.5l3 3 3.5-1" />
+  </svg>
+)
+
+export const ClockIcon = (p: P) => (
+  <svg {...base(p)}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 7v5l3 2" />
+  </svg>
+)
+
+export const CalendarIcon = (p: P) => (
+  <svg {...base(p)}>
+    <rect x="3.5" y="5" width="17" height="15" rx="2" />
+    <path d="M3.5 10h17M8 3v4M16 3v4M8.5 14.5l2 2 4-4" />
+  </svg>
+)
+
+export const CheckIcon = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M5 12.5l4.5 4.5L19 7.5" />
+  </svg>
+)
+
 export const PhoneIcon = (p: P) => (
   <svg {...base(p)}>
     <path d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 5.2 5.2l1.3-2 4.2 1.6V17a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 2.5 6.2 2.5 2.5 0 0 1 5 3.5z" />
