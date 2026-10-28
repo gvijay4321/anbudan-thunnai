@@ -249,7 +249,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: 'How soon can a companion come?',
-    a: 'For plans we usually start within a few days after an introduction. For one-off trips, try to book a day ahead; we will always try to help with urgent requests.',
+    a: 'Plans usually start within a few days of your first call. For one-off trips, please book a day ahead. We always try our best to help with urgent requests too.',
   },
 ]
 
