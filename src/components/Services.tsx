@@ -19,15 +19,13 @@ export default function Services() {
                   <Icon name={s.icon} width={28} height={28} />
                 </div>
               </div>
-              <div className="service-body">
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-                <ul>
-                  {s.details.map((d) => (
-                    <li key={d}>{d}</li>
-                  ))}
-                </ul>
-              </div>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+              <ul>
+                {s.details.map((d) => (
+                  <li key={d}>{d}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
