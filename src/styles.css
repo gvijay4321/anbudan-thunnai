@@ -843,10 +843,13 @@ h3 {
   align-items: stretch;
 }
 
+/* Each plan spans 5 shared rows (name, tagline, price, list, button) so they line up across cards */
 .plan {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
+  row-gap: 0;
   padding: 36px 30px 30px;
   border-radius: 28px;
   background: var(--surface);
@@ -858,7 +861,6 @@ h3 {
   color: #fff;
   border-color: #0b4f49;
   box-shadow: var(--shadow);
-  transform: translateY(-8px);
 }
 
 [data-theme='dark'] .plan-featured {
@@ -921,7 +923,6 @@ h3 {
   display: grid;
   align-content: start;
   gap: 10px;
-  flex: 1;
 }
 
 .plan li {
@@ -1199,10 +1200,6 @@ h3 {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin-inline: auto;
-  }
-
-  .plan-featured {
-    transform: none;
   }
 
   .trust-grid {
