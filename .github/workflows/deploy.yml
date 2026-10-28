@@ -1,39 +1,42 @@
-# Builds the site and uploads it to Namecheap hosting over FTP on every push to main.
-# Required repo secrets (Settings → Secrets and variables → Actions):
-#   FTP_SERVER    e.g. ftp.yourdomain.com  (or the server IP shown in cPanel)
-#   FTP_USERNAME  cPanel FTP account, e.g. deploy@yourdomain.com
-#   FTP_PASSWORD  password for that FTP account
-name: Deploy to Namecheap
+# Builds the site and publishes it to GitHub Pages on every push to main.
+# The custom domain comes from public/CNAME; DNS is set in Namecheap → Advanced DNS (see README).
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 concurrency:
-  group: deploy
+  group: pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-
       - run: npm ci
       - run: npm run build
-
-      - name: Upload via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - uses: actions/upload-pages-artifact@v3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          # If the FTP account's home is your cPanel root, change this to public_html/
-          server-dir: ./
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
